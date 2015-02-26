@@ -6,6 +6,10 @@
 package edd.practica1s1_201213610;
 
 import static edd.practica1s1_201213610.EDDPractica1s1_201213610.listaJ;
+import static edd.practica1s1_201213610.EDDPractica1s1_201213610.contz;
+import static edd.practica1s1_201213610.EDDPractica1s1_201213610.contp;
+import static edd.practica1s1_201213610.EDDPractica1s1_201213610.jugp;
+import static edd.practica1s1_201213610.EDDPractica1s1_201213610.jugz;
 
 /**
  *
@@ -150,8 +154,13 @@ public class Eleccion extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegresarEActionPerformed
 
     private void jButtonComenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComenzarActionPerformed
-        // TODO add your handling code here:               
-  
+        // TODO add your handling code here:        
+        try{
+        contp=this.jComboNumeroP.getSelectedIndex()+1;
+        contz=this.jComboNumeroZ.getSelectedIndex()+1;
+        jugz=this.jComboJugadorZ.getSelectedItem().toString();
+        jugp=this.jComboJugadorP.getSelectedItem().toString();
+        }catch(Exception ex){}
         
         Plataforma juego = new Plataforma();
         juego.setVisible(true);

@@ -13,7 +13,6 @@ public class ListaPoZ {
     
     public String cla, ima, ti, puA, puD, nom, due;
     private int length;    
-//    public String nom,ape,eda,tel,dir,ima;
     public NodoPoZ aux, nuevo,reco ,inicio,personaje;
     
     public ListaPoZ (){
@@ -21,9 +20,7 @@ public class ListaPoZ {
         this.length=0;        
     }
     
-    
-    
-    //String n, String a, String e, String t, String d,String i++++++++++++++++++++++
+           
     public void incertar(String c, String i, String t, String pa, String pd,String n, String d){
     
         nuevo =new NodoPoZ(c,i,t,pa,pd,n,d);     //toma los valores y los gurada en el nodo nuevo.
@@ -131,142 +128,6 @@ public class ListaPoZ {
     public int Length(){
         return this.length;
     }
-    
-    
-//    private NodoPoZ primerNodo;
-//    private NodoPoZ ultimoNodo;
-//    
-//    private NodoPoZ registroActual;
-//    
-//    private int length;
-//
-//    public ListaPoZ(){
-//        this.length=0;
-//    }
-//
-//    /**
-//    *Adiciona el pozAdicionar al final de la lista
-//    *@param pozAdicionar el paciente que se quiere adicionar
-//    */
-//    public void Add(PoZ pozAdicionar){	
-//        NodoPoZ nodoAdicionar = new NodoPoZ(pozAdicionar);
-//
-//        //verificar si es o no el primer nodo
-//        if (this.primerNodo==null){
-//            this.primerNodo=nodoAdicionar;
-//            this.ultimoNodo=this.primerNodo;
-//            this.registroActual=this.primerNodo;
-//        }else{
-//            this.ultimoNodo.EnlazarSiguiente(nodoAdicionar);
-//            nodoAdicionar.EnlazarAnterior(this.ultimoNodo);
-//            this.ultimoNodo=nodoAdicionar;            						
-//        }
-//        this.length++;
-//    }
-//    
-//    /**
-//     * obtiene el siguiente poz de la lista
-//     * @return 
-//     */
-//    public PoZ getNextPoZ(){
-//        if (registroActual==null){
-//            return null;
-//        }else{            
-//            if (this.registroActual!=null){
-//                PoZ Temporal;
-//                Temporal = this.registroActual.getPoZ();
-//                this.registroActual=this.registroActual.getSiguienteNodo();
-//                return Temporal;
-//            }else{
-//                return null;
-//            }
-//        }
-//        
-//        
-//    }
-//    
-//    /**
-//     * reubica el registro actual en el primer paciente
-//     */
-//    public void ResetNextPoZ(){
-//        this.registroActual=this.primerNodo;
-//    }
-//            
-//
-//    /**
-//    * Retorna el numero de elementos de la lista
-//    *@return Canditad de elementos.
-//    */	
-//    public int Length(){
-//        return this.length;
-//    }
-//
-//
-//	/**
-//	*Remueve el ultimo poz de la lista
-//	*/
-//    public void Remove(){
-//
-//        if (this.primerNodo==null){
-//                return;
-//        }		
-//
-//        if (this.length==1){
-//                this.primerNodo=null;
-//        }else{
-//
-//        NodoPoZ nodoAnteriorActual;
-//        nodoAnteriorActual=this.ultimoNodo.getAnteriorNodo();
-//        
-//
-//        nodoAnteriorActual.RomperEnlaceSiguiente();
-//        this.ultimoNodo.RomperEnlaceAnterior();
-//        this.ultimoNodo=nodoAnteriorActual;        
-//
-//        }
-//        this.length--;
-//    }
-//    
-//    
-//    
-//    
-//    /**
-//     * Retorna el poz de la posicion indicada
-//     * @param posicion
-//     * @return el poz de la posicion indicada
-//     */        
-//    public PoZ getPoZAt(int posicion){
-//        if(this.primerNodo==null){
-//            return null;
-//        }else if(posicion >= length){
-//            return null;
-//        }else{
-//            NodoPoZ nodoRequerido;
-//            nodoRequerido = this.primerNodo;
-//            int contador=0;
-//            
-//            while(contador<posicion){
-//                nodoRequerido=nodoRequerido.getSiguienteNodo();   
-//                contador++;
-//            }
-//            
-//            return nodoRequerido.getPoZ();
-//        }    
-//        
-//    }
-//
-//    public void Modificar(int pozModificar, PoZ mod){
-//        PoZ obt = getPoZAt(pozModificar);
-//        
-//        obt.setClase(mod.getClase());
-//        obt.setImagen(mod.getImagen());
-//        obt.setNombre(mod.getNombre());
-//        obt.setPuntosA(mod.getPuntosA());
-//        obt.setPuntosD(mod.getPuntosD());
-//        obt.setTipo(mod.getTipo());
-//    }
-//    
-//    
     
     
 }

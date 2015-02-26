@@ -12,43 +12,40 @@ package edd.practica1s1_201213610;
 public class Pilita {
     public Nodo primerNodo;
     public Nodo ultimoNodo;
-
-    public void apilar(Object datos) {
-        if (listaVacia()) {
-            primerNodo = ultimoNodo = new Nodo(datos);
-        } else {
-            primerNodo = new Nodo(datos, primerNodo);
-        }
-    }
-
-    ;
-    
-    public Object eliminar() {
-        if (!listaVacia()) {
-            Object elementoEliminado = primerNodo.datos; // obtiene los datos que se van aeliminar
-            // actualiza las referencias primerNodo y ultimoNodo
+        
+    public Object pop() {
+        if (!empty()) {
+            Object elim = primerNodo.datos;             
             if (primerNodo == ultimoNodo) {
                 primerNodo = ultimoNodo = null;
             } else {
                 primerNodo = primerNodo.siguienteNodo;
             }
-            return elementoEliminado; // devuelve los datos del nodo eliminado
+            return elim; 
         } else {
             return null;
         }
     }
-
-    public int tamanioDeLaPila() {
-        Nodo nodo = primerNodo;
-        int tamanioPila = 0;
-        while (nodo != null) {
-            tamanioPila++;
-            nodo = nodo.siguienteNodo;
+    
+    public void push(Object objeto) {
+        if (empty()) {
+            primerNodo = ultimoNodo = new Nodo(objeto);
+        } else {
+            primerNodo = new Nodo(objeto, primerNodo);
         }
-        return tamanioPila;
     }
 
-    boolean listaVacia() {
+    public int size() {
+        Nodo nodo = primerNodo;
+        int tamano = 0;
+        while (nodo != null) {
+            tamano++;
+            nodo = nodo.siguienteNodo;
+        }
+        return tamano;
+    }
+
+    boolean empty() {
         return primerNodo == null;
     }
 }

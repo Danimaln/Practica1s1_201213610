@@ -13,17 +13,13 @@ public class ListaJ {
     
     public String nom, usu;
     private int length;    
-//    public String nom,ape,eda,tel,dir,ima;
     public NodoJ aux, nuevo,reco ,inicio,listaj;
     
     public ListaJ (){
         inicio=null;
         this.length=0;        
-    }
-    
-    
-    
-    //String n, String a, String e, String t, String d,String i++++++++++++++++++++++
+    }   
+          
     public void incertar(String n, String u){
     
         nuevo =new NodoJ(n,u);     //toma los valores y los gurada en el nodo nuevo.
@@ -114,124 +110,5 @@ public class ListaJ {
     public int Length(){
         return this.length;
     }
-    
-    
-    
-//    private NodoJ primerNodo;
-//    private NodoJ ultimoNodo;
-//    
-//    private NodoJ registroActual;
-//    
-//    private int length;
-//
-//    public ListaJ(){
-//        this.length=0;
-//    }
-//
-//    /**
-//    *Adiciona el jAdicionar al final de la lista
-//    *@param jAdicionar el paciente que se quiere adicionar
-//    */
-//    public void Add(Jugador jAdicionar){	
-//        NodoJ nodoAdicionar = new NodoJ(jAdicionar);
-//
-//        //verificar si es o no el primer nodo
-//        if (this.primerNodo==null){
-//            this.primerNodo=nodoAdicionar;
-//            this.ultimoNodo=this.primerNodo;
-//            this.registroActual=this.primerNodo;
-//        }else{
-//            this.ultimoNodo.EnlazarSiguiente(nodoAdicionar);
-//            nodoAdicionar.EnlazarAnterior(this.ultimoNodo);
-//            this.ultimoNodo=nodoAdicionar;					
-//        }
-//        this.length++;
-//    }
-//    
-//    /**
-//     * obtiene el siguiente j de la lista
-//     * @return 
-//     */
-//    public Jugador getNextJ(){
-//        if (registroActual==null){
-//            return null;
-//        }else{            
-//            if (this.registroActual!=null){
-//                Jugador Temporal;
-//                Temporal = this.registroActual.getJ();
-//                this.registroActual=this.registroActual.getSiguienteNodo();
-//                return Temporal;
-//            }else{
-//                return null;
-//            }
-//        }
-//        
-//        
-//    }
-//    
-//    /**
-//     * reubica el registro actual en el primer jugador
-//     */
-//    public void ResetNextPoZ(){
-//        this.registroActual=this.primerNodo;
-//    }
-//            
-//    /**
-//    * Retorna el numero de elementos de la lista
-//    *@return Canditad de elementos.
-//    */	
-//    public int Length(){
-//        return this.length;
-//    }
-//
-//	/**
-//	*Remueve el ultimo jugador de la lista
-//	*/
-//    public void Remove(){
-//
-//        if (this.primerNodo==null){
-//                return;
-//        }		
-//
-//        if (this.length==1){
-//                this.primerNodo=null;
-//        }else{
-//
-//        NodoJ nodoAnteriorActual;
-//        nodoAnteriorActual=this.ultimoNodo.getAnteriorNodo();
-//        
-//
-//        nodoAnteriorActual.RomperEnlaceSiguiente();
-//        this.ultimoNodo.RomperEnlaceAnterior();
-//        this.ultimoNodo=nodoAnteriorActual;        
-//	
-//        }
-//        this.length--;
-//    }
-//    
-//    /**
-//     * Retorna el j de la posicion indicada
-//     * @param posicion
-//     * @return el j de la posicion indicada
-//     */        
-//    public Jugador getJAt(int posicion){
-//        if(this.primerNodo==null){
-//            return null;
-//        }else if(posicion >= length){
-//            return null;
-//        }else{
-//            NodoJ nodoRequerido;
-//            nodoRequerido = this.primerNodo;
-//            int contador=0;
-//            
-//            while(contador<posicion){
-//                nodoRequerido=nodoRequerido.getSiguienteNodo();   
-//                contador++;
-//            }
-//            
-//            return nodoRequerido.getJ();
-//        }    
-//        
-//    }
-//    
+           
 }
