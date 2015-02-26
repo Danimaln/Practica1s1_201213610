@@ -61,7 +61,8 @@ public class Plataforma extends javax.swing.JFrame {
    
     
             
-    public void RandomZ(){        
+    public void RandomZ(){      
+        try{
         for (int i=0; i<contz; i++){     
             
 //            boolean rot=true;
@@ -82,10 +83,12 @@ public class Plataforma extends javax.swing.JFrame {
 //            }        
         }
         System.out.println(enviar);
+        }catch(Exception ex){}
     }
     
     
-    public void RandomP(){        
+    public void RandomP(){      
+        try{
         for (int i=0; i<contp; i++){     
             
 //            boolean rot=true;
@@ -107,6 +110,7 @@ public class Plataforma extends javax.swing.JFrame {
 //            }
         }        
         System.out.println(enviar2);
+        }catch(Exception ex){}
     }
     
     

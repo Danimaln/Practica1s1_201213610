@@ -47,7 +47,7 @@ public class Inicio extends javax.swing.JFrame {
                 jButtonIniciarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, -1, -1));
+        getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 340, -1, -1));
 
         jButtonOpciones.setText("Opciones");
         jButtonOpciones.addActionListener(new java.awt.event.ActionListener() {
